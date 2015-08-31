@@ -26,7 +26,7 @@ class ParkMapViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    let latDelta = park.overlayBottomLeftCoordinate.latitude - park.overlayBottomLeftCoordinate.latitude
+    let latDelta = park.overlayTopLeftCoordinate.latitude - park.overlayBottomRightCoordinate.latitude
     
     let span = MKCoordinateSpanMake(fabs(latDelta), 0.0)
     

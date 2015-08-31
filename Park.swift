@@ -23,13 +23,13 @@ class Park {
         }
     }
     
-    var overlayBoundMapRect: MKMapRect {
+    var overlayBoundingMapRect: MKMapRect {
         get {
             let topLeft = MKMapPointForCoordinate(overlayTopLeftCoordinate)
             let topRight = MKMapPointForCoordinate(overlayTopRightCoordinate)
             let bottomLeft = MKMapPointForCoordinate(overlayBottomLeftCoordinate)
             
-            return MKMapRectMake(topLeft.x, topLeft.y, fabs(topLeft.x - topRight.x), fabs(topLeft.y - topRight.y))
+            return MKMapRectMake(topLeft.x, topLeft.y, fabs(topLeft.x - topRight.x), fabs(topLeft.y - bottomLeft.y))
         }
     }
     
